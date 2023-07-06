@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: userservice
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: true
+        prefix: config
+        format: YAML
+        default-context: userService
+        data-key: userServiceConfig
+        watch:
+          enabled: true
+          delay: 1000
+      discovery:
+        register: true
+        instance-id: ${spring.application.name}:${server.port} # 应用名称+服务器IP+端口
+        service-name: ${spring.application.name}
+        heartbeat:
+          enabled: true
+
+

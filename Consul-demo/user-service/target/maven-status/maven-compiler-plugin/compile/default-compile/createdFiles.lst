@@ -1,0 +1,5 @@
+com\wan\user\service\UserService.class
+com\wan\user\mapper\UserMapper.class
+com\wan\user\pojo\User.class
+com\wan\user\web\UserController.class
+com\wan\user\UserApplication.class
