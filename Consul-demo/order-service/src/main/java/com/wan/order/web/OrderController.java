@@ -24,6 +24,13 @@ public class OrderController {
     @GetMapping("user/{userId}")
     public List<Order> queryOrderByUserId(@PathVariable("userId") Long userId) {
         // 根据userid查询所有订单并返回
+        for (int i = 0; i < 3; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
         return orderService.queryOrderByUserId(userId);
     }
 
@@ -36,12 +43,15 @@ public class OrderController {
     @GetMapping("price/user/{userId}")
     public Long queryPriceByUserId(@PathVariable("userId") Long userId) {
         // 根据UserId查询总金额
+        /**
+         * For JMter Test
         try{
             Thread.sleep(500);
         }
         catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
+        int i=1/0;
         return orderService.queryPriceByUserId(userId);
     }
 

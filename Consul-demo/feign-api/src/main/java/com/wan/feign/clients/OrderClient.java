@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient("orderservice")
+//@FeignClient("orderservice")
+//改用OrderHystrixClient1和OrderHystrixClient2
 public interface OrderClient {
 
     @GetMapping("order/user/{userId}")

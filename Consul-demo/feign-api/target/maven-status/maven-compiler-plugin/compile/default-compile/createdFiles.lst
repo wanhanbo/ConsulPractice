@@ -1,0 +1,10 @@
+com\wan\feign\clients\OrderHystrixClient1.class
+com\wan\feign\config\DefaultFeignConfiguration.class
+com\wan\feign\fallback\OrderFallbackFactory.class
+com\wan\feign\fallback\OrderFallback.class
+com\wan\feign\pojo\Order.class
+com\wan\feign\pojo\User.class
+com\wan\feign\clients\OrderClient.class
+com\wan\feign\fallback\OrderFallbackFactory$1.class
+com\wan\feign\clients\OrderHystrixClient2.class
+com\wan\feign\clients\UserClient.class
