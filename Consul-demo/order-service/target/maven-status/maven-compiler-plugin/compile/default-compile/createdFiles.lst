@@ -1,0 +1,5 @@
+com\wan\order\mapper\OrderMapper.class
+com\wan\order\service\OrderService.class
+com\wan\order\OrderApplication.class
+com\wan\order\web\OrderController.class
+com\wan\order\pojo\Order.class

@@ -1,0 +1,9 @@
+D:\Working\Prepare\Consul-demo\feign-api\src\main\java\com\wan\feign\clients\OrderClient.java
+D:\Working\Prepare\Consul-demo\feign-api\src\main\java\com\wan\feign\clients\OrderHystrixClient2.java
+D:\Working\Prepare\Consul-demo\feign-api\src\main\java\com\wan\feign\pojo\Order.java
+D:\Working\Prepare\Consul-demo\feign-api\src\main\java\com\wan\feign\fallback\OrderFallback.java
+D:\Working\Prepare\Consul-demo\feign-api\src\main\java\com\wan\feign\fallback\OrderFallbackFactory.java
+D:\Working\Prepare\Consul-demo\feign-api\src\main\java\com\wan\feign\pojo\User.java
+D:\Working\Prepare\Consul-demo\feign-api\src\main\java\com\wan\feign\clients\OrderHystrixClient1.java
+D:\Working\Prepare\Consul-demo\feign-api\src\main\java\com\wan\feign\config\DefaultFeignConfiguration.java
+D:\Working\Prepare\Consul-demo\feign-api\src\main\java\com\wan\feign\clients\UserClient.java

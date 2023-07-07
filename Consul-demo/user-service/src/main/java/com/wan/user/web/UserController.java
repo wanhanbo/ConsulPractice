@@ -47,14 +47,13 @@ public class UserController {
     @GetMapping("/{id}/orders")
     /** 查询{id}的所有订单*/
     public List<Order> queryAllOrdersById(@PathVariable("id") Long id) {
-        System.out.println(Thread.currentThread().getName()+"=====queryAllOrdersById()===");
         return userService.queryAllOrdersById(id);
     }
 
     @GetMapping("/{id}/price")
     /** 查询{id}订单总价*/
     public Long querySumPrice(@PathVariable("id") Long id) {
-        System.out.println(Thread.currentThread().getName()+"=====querySumPrice()===");
+
         return userService.querySumPrice(id);
     }
 
