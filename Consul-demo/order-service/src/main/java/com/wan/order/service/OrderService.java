@@ -5,20 +5,20 @@ import com.wan.feign.clients.UserClient;
 import com.wan.feign.pojo.User;
 import com.wan.order.mapper.OrderMapper;
 import com.wan.order.pojo.Order;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.bind.annotation.PathVariable;
+
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class OrderService {
 
     @Autowired
     private OrderMapper orderMapper;
-
-    @Autowired
-    private RestTemplate restTemplate;
 
     @Resource
     private UserClient userClient;
@@ -34,4 +34,29 @@ public class OrderService {
         // 4.返回
         return order;
     }
+
+    public List<Order> queryOrderByUserId(Long userId){
+        List<Order> orderList=orderMapper.findByUserId(userId);
+        return orderList;
+    }
+
+    public Long queryPriceById( Long orderId){
+        return orderMapper.priceById(orderId);
+    }
+    public Long queryPriceByUserId(Long userId){
+        return orderMapper.priceByUserId(userId);
+    }
+
+
+    public List<Order> findAllOrders(){
+        List<Order> orderList=orderMapper.findALLOrders();
+        for(Order order:orderList){
+            User user=userClient.queryById(order.getUserId());
+            //3.封装user到order
+            order.setUser(user);
+        }
+        return orderList;
+    }
+
+
 }

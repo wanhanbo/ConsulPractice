@@ -9,16 +9,15 @@ spring:
   application:
     name: orderservice
   cloud:
-    cloud:
-      consul:
-        host: localhost
-        port: 8500
-        discovery:
-          register: true
-          instance-id: ${spring.application.name}:${server.port} # 应用名称+服务器IP+端口
-          service-name: ${spring.application.name}
-          heartbeat:
-            enabled: true
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: true
+        instance-id: ${spring.application.name}:${server.port} # 应用名称+服务器IP+端口
+        service-name: ${spring.application.name}
+        heartbeat:
+          enabled: true
 
 mybatis:
   type-aliases-package: com.wan.user.pojo
