@@ -36,6 +36,12 @@ public class OrderController {
     @GetMapping("price/user/{userId}")
     public Long queryPriceByUserId(@PathVariable("userId") Long userId) {
         // 根据UserId查询总金额
+        try{
+            Thread.sleep(500);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
         return orderService.queryPriceByUserId(userId);
     }
 

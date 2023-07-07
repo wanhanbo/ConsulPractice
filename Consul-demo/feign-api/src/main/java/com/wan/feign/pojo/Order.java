@@ -1,6 +1,5 @@
-package com.wan.order.pojo;
+package com.wan.feign.pojo;
 
-import com.wan.feign.pojo.User;
 import lombok.Data;
 
 @Data
